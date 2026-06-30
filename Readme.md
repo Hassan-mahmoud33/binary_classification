@@ -3,7 +3,7 @@ This project implements binary classification , it contains two features
 - Exam 1 , Exam 2 ( X1 , X2 independent variables )
 - one target ( Admitted ) represents in ( 0 , 1 ) ( y dependent variable )
 
-##Features
+## Features
 - shows information about the data
 - splits the dataset to Admitted and Not Admitted
 - draws the sigmoid function
