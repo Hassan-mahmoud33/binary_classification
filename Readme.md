@@ -84,6 +84,33 @@ Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 ! [Sigmoid](images/sigmoid.png)
 
 
+## How to Run:
+
+- 1. Clone the repository:
+   
+   git clone https://github.com/your-username/your-repository.git
+
+- 2. Navigate to the project directory:
+   
+   cd 
+
+- 3. Install the required libraries:
+   
+   pip install pandas numpy matplotlib scikit-learn
+
+- 4. Run the project:
+   
+   python main.py
+
+## Libraries used :
+- Numpy
+- matplotlib
+- pandas
+- os
+- sklearn
+- scipy
+
+
 
 
 
