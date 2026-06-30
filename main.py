@@ -28,11 +28,11 @@ display()
 positive = data [ data['Admitted'].isin([1])]
 negative = data [ data['Admitted'] == 0 ]
 
-# print(f"Admitted students : {positive}")
-# print(f"Inadmitted students : {negative}")
+print(f"Admitted students : {positive.head(2)}")
+print(f"Inadmitted students : {negative.head(2)}")
 
-# print(f"Admitted students = {(data['Admitted'] == 1 ).sum()}")
-# print(f"Inadmitted students = {(data['Admitted'] == 0 ).sum()}")
+print(f"Admitted students = {(data['Admitted'] == 1 ).sum()}")
+print(f"Inadmitted students = {(data['Admitted'] == 0 ).sum()}")
 
 
 #******************************************************************************
@@ -79,7 +79,7 @@ y = data.iloc[ : , cols - 1 : cols]
 # print(f"y = {y.head(4)}\n")
 
 X = np.array(X.values)
-y = np.array(y.values)
+y = np.array(y.values).flatten()
 
 # print(f"X = {X[0 : 3 ]}\n")
 # print(f'{'-'*50}\n')
@@ -128,7 +128,7 @@ import scipy.optimize as opt
 
 result = opt.fmin_tnc ( func=cost , x0=theta , fprime=gradient , args=( X , y) , messages=False)
 
-# print(f"result = {result}") 
+print(f"result = {result}") 
 # (array([-25.16131865,   0.20623159,   0.20147149]), 36, 0)
 # ( [ theta0 , theta1 , theta2 ] , iterations , 0 = optimization has successed  )
 
