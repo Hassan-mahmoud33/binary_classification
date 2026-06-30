@@ -22,6 +22,88 @@ Exam 2 : the score in the second exam
 Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 
 # Implementation details
+- clear the terminal
+- load the data and displays its information
+- splits Admitted Student and Not Admitted Student
+- shows a figure to Admitted Student and Not Admitted Student
+- implements sigmoid function
+  mathematical equation of sigmoid = 1 / 1 + e^ - X * theta
+- draw sigmoid function
+- inserts the column of the ones
+- splits X features and y target
+- establish theta
+- calculates mathematically cost function
+- implements manualy Gradient Descent
+- optimizes the model parameters using Scipy optimization to minimize the cost function
+- setups the target zero or one
+- predicting new predictions
+- calculates Model's Accuracy
+
+  ## Result
+  
+--------------------------------------------------
+
+      Exam 1     Exam 2  Admitted
+0  34.623660  78.024693         0
+1  30.286711  43.894998         0
+2  35.847409  72.902198         0
+--------------------------------------------------
+
+           Exam 1      Exam 2    Admitted
+count  100.000000  100.000000  100.000000
+mean    65.644274   66.221998    0.600000
+std     19.458222   18.582783    0.492366
+min     30.058822   30.603263    0.000000
+25%     50.919511   48.179205    0.000000
+50%     67.032988   67.682381    1.000000
+75%     80.212529   79.360605    1.000000
+max     99.827858   98.869436    1.000000
+--------------------------------------------------
+
+<class 'pandas.DataFrame'>
+RangeIndex: 100 entries, 0 to 99
+Data columns (total 3 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   Exam 1    100 non-null    float64
+ 1   Exam 2    100 non-null    float64
+ 2   Admitted  100 non-null    int64  
+dtypes: float64(2), int64(1)
+memory usage: 2.5 KB
+None
+Exam 1      100
+Exam 2      100
+Admitted      2
+dtype: int64
+Admitted students :       Exam 1     Exam 2  Admitted
+3  60.182599  86.308552         1
+4  79.032736  75.344376         1
+Inadmitted students :       Exam 1     Exam 2  Admitted
+0  34.623660  78.024693         0
+1  30.286711  43.894998         0
+Admitted students = 60
+Inadmitted students = 40
+result = (array([-25.16131863,   0.20623159,   0.20147149]), 36, 0)
+cost before optimization = 0.6931471805599453
+cost after optimization = 0.20349770158947458
+new predictions = [0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1]
+
+Accuracy = 89.0 %
+
+
+## Visualization
+- the figure below shows Admitted and Not Admitted Students
+!(Admitted and Not Admitted Students)[images/students.png)
+
+- the figure below shows sigmoid function distribution
+!(Sigmoid)[images/sigmoid.png)
+
+
+
+
+
+
+
 
 
 
