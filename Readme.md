@@ -110,19 +110,5 @@ Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 - sklearn
 - scipy
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  ## Purpose
+  - this project for educational purpose
