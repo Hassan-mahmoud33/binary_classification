@@ -78,10 +78,10 @@ Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 
 ## Visualization
 - the figure below shows Admitted and Not Admitted Students
-! [Admitted and Not Admitted Students](images/students.png)
+![Admitted and Not Admitted Students](images/students.png)
 
 - the figure below shows sigmoid function distribution
-! [Sigmoid](images/sigmoid.png)
+![Sigmoid](images/sigmoid.png)
 
 
 ## How to Run:
