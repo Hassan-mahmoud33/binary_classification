@@ -53,11 +53,13 @@ Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 - Admitted      2
 - dtype: int64
   
-- Admitted students :       Exam 1     Exam 2  Admitted
+- Admitted students :
+- Exam 1     Exam 2  Admitted
 - 3  60.182599  86.308552         1
 - 4  79.032736  75.344376         1
   
-- Inadmitted students :       Exam 1     Exam 2  Admitted
+- Inadmitted students :
+- Exam 1     Exam 2  Admitted
 - 0  34.623660  78.024693         0
 - 1  30.286711  43.894998         0
 - Admitted students = 60
