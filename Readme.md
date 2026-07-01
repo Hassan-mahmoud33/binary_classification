@@ -106,7 +106,7 @@ pip install pandas numpy matplotlib scipy
 4. Run the project:
 
 ```bash
-python binary_classification.py
+python main.py
 ```
 
 ## Libraries used :
