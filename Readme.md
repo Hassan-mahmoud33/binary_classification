@@ -1,100 +1,91 @@
-# Binary Classification Project
-This project implements binary classification , it contains two features 
-- Exam 1 , Exam 2 ( X1 , X2 independent variables )
-- one target ( Admitted ) represents in ( 0 , 1 ) ( y dependent variable )
+# Binary Classification and Optimization Project
+This project implements binary classification with Regularization and Optimization
+it contains two features :
+- Test 1 , Test 2 ( X1 , X2 independent variables )
+- one target ( Accepted ) represents in ( 0 , 1 ) ( y dependent variable )
 
 ## Features
-- shows information about the data
-- splits the dataset to Admitted and Not Admitted
-- draws the sigmoid function
-- calculates mathematically sigmoid function 
-- splits X ( features ) and y ( target )
-- calculates mathematically Cost function
-- optimizes the model parameters using Scipy optimization to minimize the cost function
-- setups the target zero or one
-- predicting new predictions
-- calculates Model's Accuracy
+- visualizes accepted and rejected students
+- Feature Mapping
+- implements sigmoid function , - cost , gradient manully
+- adds lambda regularization to reduce overfitting
+- implements optimization and regularization
+- converts probabilities into binary predictions by this following code ```
+    probability = sigmoid( X * theta.T )
+    return [ 1 if x >= 0.50 else 0 for x in probability ] ```
+
+- calculates  Model's Accurcy
+
 
 ## Data Structure
-Exam 1 : the score in the first exam
-Exam 2 : the score in the second exam
-Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
+Test 1 : the score in the first exam
+Test 2 : the score in the second exam
+Accepted : Admission result ( 1 = Accepted , 0 = Rejected )
 
-# Implementation details
+
+## Implementation Details
+
 - clear the terminal
 - load the data and displays its information
-- splits Admitted Student and Not Admitted Student
-- shows a figure to Admitted Student and Not Admitted Student
-- implements sigmoid function
-  mathematical equation of sigmoid = 1 / ( 1 + e^ - X * theta )
-- draw sigmoid function
+- splits Accepted Student and Rejected Student
+- shows a figure of Accepted Student and Rejected Student
 - inserts the column of the ones
+
+- creates polynomial features up to degree 6 to enable logistic regression
+  to learn a non-linear decision boundary
+  ``` python degree = 6 
+
+for i in range(1 , degree + 1   ):
+    for j in range( 0 , i):
+        data[f"F{i}{j}"] =  np.power(x1 , i - j ) * np.power( x2 , j ) ```
+
 - splits X features and y target
-- establish theta
+- initializes theta
+- implements sigmoid function
+  mathematical equation of sigmoid = 1 / ( 1 + e^ (- X 0) )
 - calculates mathematically cost function
+- implements gradient and adds a lambda ( penalty ) to reduce overfitting and theta values small
 - optimizes the model parameters using Scipy optimization to minimize the cost function
-- setups the target zero or one
+- sets the target to zero or one
 - predicting new predictions
 - calculates Model's Accuracy
 
-  ## Result
-  
 
+## Result
 
-- <class 'pandas.DataFrame'>
-- RangeIndex: 100 entries, 0 to 99
-- Data columns (total 3 columns):
-- dtypes: float64(2), int64(1)
-- memory usage: 2.5 KB
+```
+result = (array([  0.68975378,  -1.85084734,   9.31329816,  -6.7344271 ,
+        12.23343196,  24.86665454,  10.07403536, -15.76787273,
+        -5.13606792, -21.65344469,   0.23050047,  -2.87157687,
+       -15.04779415,  17.41208679, -14.42661723, -23.99118004,
+       -18.69712165,  -6.04226655,  -3.13282086,  -4.35114792,
+       -32.42243902,  16.26389868]), 108, 1)
 
-#### unique
-- Exam 1      100
-- Exam 2      100
-- Admitted      2
-- dtype: int64
-  
-- Admitted students :
-  
--        Exam 1          Exam 2        Admitted
-- 3      60.182599       86.308552         1
-- 4      79.032736       75.344376         1
-  
-- Not admitted students :
-  
--        Exam 1          Exam 2        Admitted
-- 0      34.623660       78.024693         0
-- 1      30.286711       43.894998         0
-- Admitted students = 60
-- Not admitted students = 40
-  
-- result = (array([-25.16131863,   0.20623159,   0.20147149]), 36, 0)
-- 
-- cost before optimization = 0.6931471805599453
-- cost after optimization = 0.20349770158947458
-- new predictions = [0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, - 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, - 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1]
+cost before optimization = 0.6931471805599454
+cost after optimization = 0.409355569790105
 
-- Accuracy = 89.0 %
+new predictions = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1]
+
+Accuracy = 79.66101694915254 %
+```
 
 
 ## Visualization
-- the figure below shows Admitted and Not Admitted Students
-![Admitted and Not Admitted Students](images/students.png)
-
-- the figure below shows sigmoid function distribution
-![Sigmoid](images/sigmoid.png)
+- the figure below shows Accepted and Rejected Students
+![Admitted and Not Admitted Students](images/figure.png)
 
 
 ## How to Run
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Hassan-mahmoud33/binary_classification.git
+git clone https://github.com/Hassan-mahmoud33/regularization.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd binary_classification
+cd regularization
 ```
 
 3. Install the required libraries:
@@ -106,10 +97,10 @@ pip install pandas numpy matplotlib scipy
 4. Run the project:
 
 ```bash
-python main.py
+python regularization.py
 ```
 
-## Libraries used :
+## Libraries used 
 - Numpy
 - matplotlib
 - pandas
@@ -117,4 +108,4 @@ python main.py
 - scipy
 
   ## Purpose
-  - this project for educational purpose
+  - this project for educational purposes
