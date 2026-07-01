@@ -10,7 +10,6 @@ This project implements binary classification , it contains two features
 - calculates mathematically sigmoid function 
 - splits X ( features ) and y ( target )
 - calculates mathematically Cost function
-- implements manually Gradient Descent 
 - optimizes the model parameters using Scipy optimization to minimize the cost function
 - setups the target zero or one
 - predicting new predictions
@@ -27,13 +26,12 @@ Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 - splits Admitted Student and Not Admitted Student
 - shows a figure to Admitted Student and Not Admitted Student
 - implements sigmoid function
-  mathematical equation of sigmoid = 1 / 1 + e^ - X * theta
+  mathematical equation of sigmoid = 1 / ( 1 + e^ - X * theta )
 - draw sigmoid function
 - inserts the column of the ones
 - splits X features and y target
 - establish theta
 - calculates mathematically cost function
-- implements manualy Gradient Descent
 - optimizes the model parameters using Scipy optimization to minimize the cost function
 - setups the target zero or one
 - predicting new predictions
@@ -48,6 +46,8 @@ Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 - Data columns (total 3 columns):
 - dtypes: float64(2), int64(1)
 - memory usage: 2.5 KB
+
+#### unique
 - Exam 1      100
 - Exam 2      100
 - Admitted      2
@@ -59,13 +59,13 @@ Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 - 3      60.182599       86.308552         1
 - 4      79.032736       75.344376         1
   
-- Inadmitted students :
+- Not admitted students :
   
 -        Exam 1          Exam 2        Admitted
 - 0      34.623660       78.024693         0
 - 1      30.286711       43.894998         0
 - Admitted students = 60
-- Inadmitted students = 40
+- Not admitted students = 40
   
 - result = (array([-25.16131863,   0.20623159,   0.20147149]), 36, 0)
 - 
@@ -84,30 +84,36 @@ Admitted : Admission result ( 1 = Admitted , 0 = Not Admitted )
 ![Sigmoid](images/sigmoid.png)
 
 
-## How to Run:
+## How to Run
 
-- 1. Clone the repository:
-   
-   git clone https://github.com/your-username/your-repository.git
+1. Clone the repository:
+```bash
+git clone https://github.com/Hassan-mahmoud33/binary_classification.git
+```
 
-- 2. Navigate to the project directory:
-   
-   cd 
+2. Navigate to the project directory:
 
-- 3. Install the required libraries:
-   
-   pip install pandas numpy matplotlib scikit-learn
+```bash
+cd binary_classification
+```
 
-- 4. Run the project:
-   
-   python main.py
+3. Install the required libraries:
+
+```bash
+pip install pandas numpy matplotlib scipy
+```
+
+4. Run the project:
+
+```bash
+python binary_classification.py
+```
 
 ## Libraries used :
 - Numpy
 - matplotlib
 - pandas
 - os
-- sklearn
 - scipy
 
   ## Purpose
