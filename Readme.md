@@ -18,9 +18,9 @@ it contains two features :
 
 
 ## Data Structure
-Test 1 : the score in the first exam
-Test 2 : the score in the second exam
-Accepted : Admission result ( 1 = Accepted , 0 = Rejected )
+- Test 1 : the score in the first exam
+- Test 2 : the score in the second exam
+- Accepted : Admission result ( 1 = Accepted , 0 = Rejected )
 
 
 ## Implementation Details
